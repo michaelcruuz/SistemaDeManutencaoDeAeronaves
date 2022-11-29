@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+Fazer Login
+{% endblock %}
+
+{% block head %}
+<style>
+    #id_username, #id_password{
+    width: 100%;
+    color: #000000;
+    padding: 5px 5px;
+    margin: 0 auto 15px;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+      <header class="min-h-screen bg-black bg-opacity-50 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-cover"  style="background-image: url('{% static 'images/aviao.jpg'%}');">
+        <div class="z-0 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="text-5xl py-3 ">Seja bem-vindo!</legend>
+                    {{ form |crispy }}
+                </fieldset>
+                <button class="bg-blue-900 py-1 my-2 px-3 w-full text-white md:text-lg rounded-md" type="submit">Fazer Login</button>
+            </form>
+            <small>
+                 <p><a href="{% url 'sistema:criarconta' %}">Clique aqui para criar uma conta</a></p>
+            </small>
+        </div>
+      </header>
+
+    <footer class=" px-1 py-2 ">
+        <ul class="flex justify-between items-center">
+
+            <li>&copy; 2022</li>
+            <li> Feito com Python (Django)</li>
+            <li>Michael Cruz</li>
+        </ul>
+    </footer>
+
+{% endblock %}

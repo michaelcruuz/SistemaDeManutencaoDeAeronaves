@@ -1,0 +1,21 @@
+REQUISITOS DO TESTE
+O comportamento do sistema deverá ser composto pela
+    - Autenticação;
+    - Utilizar token JWT;
+    - Exibição e manipulação de listas;
+    - Exibição e manipulação de inputs de usuário;
+    - Validação de formulários e de rotas de navegação.
+
+1. LOGIN
+    - Campo para login, um campo para senha;
+    - Botão para autenticação;
+
+2. LISTA DE MANUTENÇÕES DO USUÁRIO
+    - Tela responsável por exibir as manutenções cadastradas pelo usuário. (primeiro login não haverá dados cadastrados)
+    -elementos em lista contendo:
+        - Descrição da manutenção;
+        - Data de cadastro;
+        - Status: se está finalizado (1) ou não (0).
+
+3. CRIAR UMA MANUTENÇÃO
+    - Botão na tela de lista de manutenções do usuário para criação de uma nova manutenção;
